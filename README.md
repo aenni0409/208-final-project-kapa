@@ -3,6 +3,7 @@
 ### Members:
 Chia-Hui Shen, Pei-Ying Lin, Kavi Tan, Ying-Chen Chou
 
-[Description of the project]
+### Project Desciption
+
 
 [Link to summary notebooks]
