@@ -1,9 +1,128 @@
-\documentclass[12pt]{article}
-\begin{document}
-\title{KAPA}
-\author{KAPA}
-\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%--------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------
 
-\section{Introduction}
-\input{intro}
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{bm}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{amssymb}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{}
+\chead{Spam Email Classification} % Top center header
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%--------------------------------------------------------------
+%	HEADING SECTIONS
+%--------------------------------------------------------------
+
+\textsc{\LARGE University of California Davis }\\[0.3cm] 
+\textsc{\Large Department of Statistics}\\[0.5cm] 
+ % Minor heading such as course title
+
+%--------------------------------------------------------------
+%	TITLE SECTION
+%--------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Machine Learning\\  (STA-208)}\\[0.03cm]
+\HRule \\[1.5cm]
+
+\hfill \break \hfill \break \hfill \break
+\hfill \break \hfill \break \hfill \break 
+\hfill \break \hfill \break \hfill \break
+\hfill \break
+
+{\large Ying-Chen Chou \\ Chia-Hui Shen \\Jiahui Tan\\ Pei-Ying Ling}
+
+\includegraphics[width=4cm]{logo.png}\\[1cm] 
+ 
+%--------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+%--------------------------------------------------------------
+%Project Start
+%--------------------------------------------------------------
+\section{Introduction} \label{sec:Intro}
+
+%\input{intro.tex}
+
+\section{Description of Data} \label{sec:Decript}
+
+\subsection{Raw Data}
+Year ( 1999 - 2007 ) \\
+Sample ( Total  ) \\
+Source (Difficulity of cleaning, how to deal with it( combination of different source, HTML….)\\
+%\input{filename}
+%Please use \subsection{Data Cleaning} to add subsection
+
+\subsection{Top 50 Words Per Year}
+\subsection{Word Cloud}
+\subsection{Mathematics}
+
+\section{Previous Studies}
+
+\section{Method}
+
+\subsection{Feature Engineering}
+
+\subsection{Fit Models}
+
+\subsection{Conclusion and exploration}
+
+
 \end{document}
