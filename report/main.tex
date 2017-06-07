@@ -104,14 +104,39 @@
 \section{Description of Data} \label{sec:Descript}
 
 \subsection{Raw Data}
-Year ( 1999 - 2007 ) \\
-Sample ( Total  ) \\
-Source (Difficulties of cleaning, how to deal with it( combination of different source, HTML….)\\
+\quad There are only a few public sources for email data to which almost everyone trying to do similar analysis will turn to. For our project, we downloaded datasets from the following three locations going between the years 1999-2007. 
+
+\begin{enumerate}
+\item Enron-Spam datasets
+\item SpamAssassin data
+\item TREC email corpus
+\end{enumerate}
+
+\begin{tabular}{l|l|l|l|l|l}
+Year & 	Ham  & Spam & Ham \% & Spam \% & Total \\
+\hline
+1999 &	2978 &	4611 & 0.392410 &	0.607590 & 7589\\
+2000 &	8512 &	2851 & 0.749098 &	0.250902 & 11363 \\
+2001 & 	9872 &	848 & 0.920896 	& 0.079104 & 10720 \\
+2002 &	10663 &	5280 & 0.668820 & 0.331180 & 15943 \\
+2003 &	545 & 	1773 & 0.235116 &	0.764884 & 2318 \\
+2004 &	627 &	13420 & 0.044636 &	0.955364 & 14047 \\
+2005 &	1309 &	18418 & 0.066356 &	0.933644 & 19727 \\
+2006 &	1226 &	2730 & 0.309909 &	0.690091 & 3956 \\
+2007 &	25219 &	48999 & 0.339796 &	0.660204 & 74218 \\
+\hline
+\end{tabular}\\\vspace{.5cm}
+
+From the table showing the distribution of emails between years, we can see that there is a disproportional number of emails between each year as well as between spam and ham groups. The imbalance dataset may be worrisome for our classifiers. However, there is not much we can do about this situation. Maybe if we can see that there is not too much variation between ham and spam emails across years or there is no time obvious time effect on the emails, then combining the different years wouldn't be a problem. To see whether there are differences in email across the email, we will examine the top words by year. 
+
+The main challenge of cleaning up the emails come from trying to remove the html and css elements, such that when we tokenize we wouldn't end up with tag elements as the most frequent words. Although we cannot remove all html and css, we did manage to get rid of most of it by the removal of contents between brackets, parathesis, and curly braces as well as words that begin with a period.  
+
 %\input{filename}
 %Please use \subsection{Data Cleaning} to add subsection
 
 \subsection{Top 50 Words Per Year}
 \subsection{Word Cloud}
+\input{wordCloud.tex}
 \subsection{Mathematics}
 
 \section{Previous Studies}
