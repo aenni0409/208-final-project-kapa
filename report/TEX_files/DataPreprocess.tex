@@ -11,7 +11,7 @@ There are only a few public sources for email data to which almost everyone tryi
 We combine all emails and extracted the information including date, from, to, subject, content, number of cc, and number of bcc. In the process of data preprocessing, we faced some challenges to get the information of year, weekday, and hour at which the email was sent. We tried to use the string methods in python but end up finding regular expression is more powerful to extract the weekday and month. The other challenge of cleaning up the emails come from trying to remove the html and css elements, such that when we tokenize we wouldn't end up with tag elements as the most frequent words. Although we cannot remove all html and css, we did manage to get rid of most of it by the removal of contents between brackets, parathesis, and curly braces as well as words that begin with a period. \\
 
 \begin{figure}[h]
-\includegraphics[width=10cm]{Email_count_each_year.png}
+\includegraphics[width=10cm]{./plots/Email_count_each_year.png}
 \centering
 \caption{Amount of Email From 1999 to 2007}
 \label{email_every_year}
@@ -42,8 +42,8 @@ After finishing the data cleaning up, we delete the emails with year not between
 \begin{figure}[H]
 \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[width=.4\linewidth]{Ham_and_Spam_per_hour.png}
-  \includegraphics[width=.4\linewidth]{Ham_and_Spam_weekday.png}
+  \includegraphics[width=.4\linewidth]{./plots/Ham_and_Spam_per_hour.png}
+  \includegraphics[width=.4\linewidth]{./plots/Ham_and_Spam_weekday.png}
 \end{subfigure}%
 \caption{Amount of Email Hourly and On Different Weekday}
 \label{email_hour_weekday}
