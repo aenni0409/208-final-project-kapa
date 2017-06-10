@@ -128,18 +128,47 @@
 
 \subsection{Feature Engineering}
 \input{FeatureEngineering.tex}
-\subsection{Fit Models}
 
+\subsection{Fit Models}
+\subsubsection{Navie Bayes}
+\input{NB.tex}
+\subsubsection{KNN}
+\input{KNN.tex}
+\subsubsection{SVMs}
+\input{SVM.tex}
+\subsubsection{MLP}
+\subsubsection{Decision Tree}
+\input{DecisionTree.tex}
+\subsubsection{Logistic}
+\input{Logistic.tex}
 
 \section{Conclusion and exploration}
-\subsection{Navie Bayes}
-\input{NB.tex}
-\subsection{KNN}
-\subsection{Linear SVM}
-\subsection{RBF SVM}
-\subsection{MLP}
-\subsection{Decision Tree}
-\subsection{Logistic}
-\input{Logistic.tex}
+
+
+\begin{table}[H]
+	\centering
+	\caption{Summary of Models Using Unit-Gram}
+	\label{Summary-one-gram}
+	\begin{tabular}{lccccccc}
+		\hline
+		Model      & Logistic             & Naive Bayes          & KNN                     & Decision Tree & MLP                  & Linear SVM & rbf SVM \\ \hline
+		Accuracy   &                      &                      & 0.9658                  & 0.9447        &                      & 0.9458     & 0.92246 \\
+		Time (sec) & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{457} & 81.1206       & \multicolumn{1}{l}{} & 6504       & 4024    \\ \hline
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+	\centering
+	\caption{Summary of Models Using Bi-Gram}
+	\label{Summary-bi-gram}
+	\begin{tabular}{lccccccc}
+		\hline
+		Model      & Logistic & Naive Bayes & KNN    & Decision Tree & MLP & Linear SVM & rbf SVM \\ \hline
+		Accuracy   &          &             & 0.9678 & 0.9398        &     & 0.9460     & 0.9093  \\
+		Time (sec) &          &             & 1107   & 1220.9498     &     & 16802      & 144056  \\ \hline
+	\end{tabular}
+\end{table}
+
 
 \end{document}
