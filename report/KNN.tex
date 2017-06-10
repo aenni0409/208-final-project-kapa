@@ -1,24 +1,4 @@
+% !TEX root = main.tex
+
 When fitting KNN models, we tune the parameters with three candidate of K including 3, 5, and 7. The running time is much longer comparing to decision tree. For unit-gram tfidf, the running time for predicting testing data is 457, 441, 494 for each K respectively. After tuning the parameter, the best K for unit-gram tfidf is K=3. The accuracy rate is 0.9657. When using bi-gram tfidf to fit the models, the best K is also 3 with the accuracy rate 0.9678. Using bi-gram in KNN model will improve our prediciton. Table \ref{Confusion_KNN} showed the confusion matrix of KNN model with both unit-gram and bi-gram tfidf. Comparing the mis-classification rate for each class, when the observations are ham email, we will have high probability to have wrong prediction.\\
 
-\begin{table}[H]
-\centering
-\begin{subtable}{.5\textwidth}
-\centering
-\begin{tabular}{@{}|c|c|c|c|@{}}
-\toprule
-\multicolumn{2}{|c|}{\multirow{2}{*}{Unit-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
-\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
-\multirow{2}{*}{Predicted}       & Ham        & 17331        & 651          \\ \cmidrule(l){2-4} 
-                                 & Spam       & 990          & 28993        \\ \bottomrule
-\end{tabular}
-\begin{tabular}{@{}|c|c|c|c|@{}}
-\toprule
-\multicolumn{2}{|c|}{\multirow{2}{*}{Bi-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
-\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
-\multirow{2}{*}{Predicted}       & Ham        & 17405        & 626          \\ \cmidrule(l){2-4} 
-                                 & Spam       & 916          & 29018        \\ \bottomrule
-\end{tabular}
-\end{subtable}
-\caption{Confusion Matrix For K Nearest Neighbor With One-gram And Bi-gram TFIDF}
-\label{Confusion_KNN}
-\end{table}
