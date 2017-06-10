@@ -131,16 +131,127 @@
 \subsection{Feature Engineering}
 \input{FeatureEngineering.tex}
 
+\pagebreak
+
 \subsection{Fit Models}
 \subsubsection{Navie Bayes}
 \input{NB.tex}
-\subsubsection{KNN}
-\input{KNN.tex}
+
+\begin{table}[H]
+	\begin{floatrow}
+		\capbtabbox{  
+			\begin{subtable}{.45\textwidth}
+				\centering
+				\begin{tabular}{@{}|c|c|c|c|@{}}
+					\toprule
+					\multicolumn{2}{|c|}{\multirow{2}{*}{Unit-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+					\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+					\multirow{2}{*}{Predicted}       & Ham        & 15123        & 9877         \\ \cmidrule(l){2-4} 
+					& Spam       & 3054         & 19919        \\ \bottomrule
+				\end{tabular}
+				
+				\begin{tabular}{@{}|c|c|c|c|@{}}
+					\toprule
+					\multicolumn{2}{|c|}{\multirow{2}{*}{Bi-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+					\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+					\multirow{2}{*}{Predicted}       & Ham        & 14905        & 9624         \\ \cmidrule(l){2-4} 
+					& Spam       & 3416         & 20020        \\ \bottomrule
+				\end{tabular}
+			\end{subtable}
+		}{  
+			\caption{Confusion Matrix with Naive Bayes}  
+			\label{Confusion_NB}  
+		}  
+		\capbtabbox{  
+			\begin{subtable}{.5\textwidth}
+				\centering
+				\begin{tabular}{@{}|c|c|c|c|@{}}
+					\toprule
+					\multicolumn{2}{|c|}{\multirow{2}{*}{Unit-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+					\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+					\multirow{2}{*}{Predicted}       & Ham        & 16837        & 1167         \\ \cmidrule(l){2-4} 
+					& Spam       & 1484         & 28477        \\ \bottomrule
+				\end{tabular}
+				
+				\begin{tabular}{@{}|c|c|c|c|@{}}
+					\toprule
+					\multicolumn{2}{|c|}{\multirow{2}{*}{Bi-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+					\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+					\multirow{2}{*}{Predicted}       & Ham        & 16787        & 1353         \\ \cmidrule(l){2-4} 
+					& Spam       & 1534         & 28291        \\ \bottomrule
+				\end{tabular}
+			\end{subtable}
+		}{  
+			\caption{Confusion Matrix For Decision Tree}  
+			\label{Confusion_DT}  
+		}  
+	\end{floatrow}
+\end{table} 
+
+
+\subsubsection{Decision Tree}
+\input{DecisionTree.tex}
+
 \subsubsection{SVMs}
 \input{SVM.tex}
 \subsubsection{MLP}
-\subsubsection{Decision Tree}
-\input{DecisionTree.tex}
+
+\subsubsection{KNN}
+\input{KNN.tex}
+
+\begin{table}[H]
+				\centering
+	\begin{floatrow}
+		\capbtabbox{  
+			\begin{subtable}{.5\textwidth}
+
+			\begin{tabular}{@{}|c|c|c|c|@{}}
+				\toprule
+				\multicolumn{2}{|c|}{\multirow{2}{*}{Unit-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+				\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+				\multirow{2}{*}{Predicted}       & Ham        & 17331        & 651          \\ \cmidrule(l){2-4} 
+				& Spam       & 990          & 28993        \\ \bottomrule
+			\end{tabular}
+			\begin{tabular}{@{}|c|c|c|c|@{}}
+				\toprule
+				\multicolumn{2}{|c|}{\multirow{2}{*}{Bi-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+				\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+				\multirow{2}{*}{Predicted}       & Ham        & 17405        & 626          \\ \cmidrule(l){2-4} 
+				& Spam       & 916          & 29018        \\ \bottomrule
+			\end{tabular}
+		\end{subtable}
+		}{  
+			\caption{Confusion Matrix For KNN}  
+			\label{Confusion_KNN}  
+		}  
+		\capbtabbox{  
+			\begin{subtable}{.5\textwidth}
+				\centering
+				\begin{tabular}{@{}|c|c|c|c|@{}}
+					\toprule
+					\multicolumn{2}{|c|}{\multirow{2}{*}{Unit-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+					\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+					\multirow{2}{*}{Predicted}       & Ham        & 16343       & 1375          \\ \cmidrule(l){2-4} 
+					& Spam       & 1834          & 28413        \\ \bottomrule
+				\end{tabular}
+				\begin{tabular}{@{}|c|c|c|c|@{}}
+					\toprule
+					\multicolumn{2}{|c|}{\multirow{2}{*}{Bi-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+					\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+					\multirow{2}{*}{Predicted}       & Ham        & 16705        & 1336          \\ \cmidrule(l){2-4} 
+					& Spam       & 1616          & 28308        \\ \bottomrule
+				\end{tabular}
+			\end{subtable}
+		}{  
+			\caption{Confusion Matrix For Logistic}  
+			\label{Confusion_Logistic}  
+		}  
+	\end{floatrow}
+\end{table} 
+
+
+
+
 \subsubsection{Logistic}
 \input{Logistic.tex}
 

@@ -1,8 +1,10 @@
+% !TEX root = main.tex
+
 We would like to use two SVM methods: Linear and RBF to do the classification. Because of the size of data, it is not easy to tune cross-validation. Therefore, we decide to use the 3-folder cross validation as our standard then tune the penalty parameter of the error term.The number of penalty parameter we chose for tuning is : 0.001,0.01,0.05,0.1,0.2,0.5,0.7, and 1.\\
 After tuning the penalty parameter, the result from test data indicated taht accuracy rate in Linear SVM performs better than RBF SMV. For the uni-gram and bi-gram, Linear SVM has similar accuracy rate. However, RBF SVM has higher accuracy in uni-gram. About the confusion matrix, the prediction of spam/ham email has similar error rate in each method. \\
 The weakness of SVM is that tuning the parameters and fitting the model is time consuming. In practice, costing too much time to predict results may increase the cost on industry especially when the data set is large. Therefore, we thought in the SVMs, time will be particularly noteworthy.
 
-\begin{table*}
+\begin{table}[H]
 \begin{floatrow}
 \capbtabbox{  
  \begin{subtable}{.45\textwidth}
@@ -51,4 +53,4 @@ The weakness of SVM is that tuning the parameters and fitting the model is time 
 }  
 \end{floatrow} 
 
-\end{table*}  
+\end{table}  
