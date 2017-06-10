@@ -17,6 +17,8 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 
+\usepackage{floatrow} 
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
@@ -29,7 +31,6 @@
 \usepackage{booktabs}
 \usepackage{subcaption}
 \usepackage{multirow}
-
 
 
 % Margins
@@ -134,8 +135,8 @@
 \input{NB.tex}
 \subsubsection{KNN}
 \input{KNN.tex}
-\subsubsection{Linear SVM}
-\subsubsection{RBF SVM}
+\subsubsection{SVMs}
+\input{SVM.tex}
 \subsubsection{MLP}
 \subsubsection{Decision Tree}
 \input{DecisionTree.tex}
