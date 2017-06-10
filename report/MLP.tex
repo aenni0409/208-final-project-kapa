@@ -1,0 +1,66 @@
+For the multilayer perceptron model, we tune the hidden layer size. The following tables shows the runtime and accuracy results with respect to each layer for both the unit-gram and bi-gram method. The other model parameters are kept at default with the exception of letting the activation function be logistic. 
+
+\begin{table}[H]
+\centering
+\begin{subtable}{.5\textwidth}
+\caption{Unit-Gram}
+\label{Unit-Gram-Tune-MLP}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Hidden Layer Size & Runtime & Accuracy \\ \midrule
+(5,2) & 62.582267046 & 0.956822683207 \\
+(10,2) & 97.1860368252 & 0.963827791098 \\
+(20,2) & 112.540017128 & 0.947753570312 \\
+(50,2) & 147.681282043 & 0.96770561868 \\
+(5,3) & 73.3039970398 & 0.958219535078 \\
+(10,3) & 100.10469985  &  0.962847909934 \\
+(20,3) & 114.212602139 & 0.967497133326 \\ 
+(50,3) & 146.349582911 & 0.949212967789 \\ \bottomrule
+\end{tabular}
+
+\caption{Bi-Gram}
+\label{Bi-Gram-Tune-MLP}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Hidden Layer Size & Runtime & Accuracy \\ \midrule
+(5,2) & 67.9229331017 & 0.95888668821 \\
+(10,2) & 95.0826570988 & 0.963702699885 \\
+(20,2) & 89.4319069386 & 0.947461690816 \\
+(50,2) & 127.49882412 & 0.967142708225 \\
+(5,3) & 66.2931339741 & 0.960346085687 \\
+(10,3) & 78.5074460506  &  0.96128426978 \\
+(20,3) & 114.212602139 &  0.967017617012 \\ 
+(50,3) & 129.54850316 & 0.948879391223\bottomrule
+\end{tabular}
+\end{subtable}
+\caption{Tuning Results}
+\end{table}
+
+Based on these results, we get that the best hidden-layer for unit-gram is (50,2) with accuracy of 0.96770561868 and the best hidden-layer for bi-gram is also (50,2) with accuracy of 0.967142708225. In this case, unit-gram does slightly better than bi-gram, but there are also other parameter variations in which bi-gram show improvement over unit-gram. However, whatever improvement there are it appears to be minor. One thing to note is that for bi-gram, there is a speed up in runtime comapred to  unit-gram. What we observed here is that an MLP with 2 hidden can model our data pretty well. The general consensus with how many hidden layers one should use in any kind of neural net is between one or two. Also increasing the number of hidden units does not guarantee improve performance as we can see in this case with 10 and 50 hidden units. 
+
+\begin{table}[H]
+\centering
+\begin{subtable}{.5\textwidth}
+\centering
+\begin{tabular}{@{}|c|c|c|c|@{}}
+\toprule
+\multicolumn{2}{|c|}{\multirow{2}{*}{Unit-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+\multirow{2}{*}{Predicted}       & Ham        & 17371        & 595 \\ \cmidrule(l){2-4} 
+                                 & Spam       & 954         & 29045        \\ \bottomrule
+\end{tabular}
+
+\begin{tabular}{@{}|c|c|c|c|@{}}
+\toprule
+\multicolumn{2}{|c|}{\multirow{2}{*}{Bi-gram}} & \multicolumn{2}{c|}{Actual} \\ \cmidrule(l){3-4} 
+\multicolumn{2}{|c|}{}                        & Ham          & Spam         \\ \midrule
+\multirow{2}{*}{Predicted}       & Ham        & 17359   	  & 616 \\ \cmidrule(l){2-4} 
+                                 & Spam       & 960 		  & 29030 \\ \bottomrule
+\end{tabular}
+\end{subtable}
+\caption{Confusion Matrix For MLP With One-gram And Bi-gram TFIDF}
+\label{Confusion_MLP}
+\end{table}
+
+
+
