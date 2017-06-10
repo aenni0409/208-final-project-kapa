@@ -4,12 +4,12 @@ After having previous step, we used tf-idf to give weight of words in each email
 
 The method we used for data reduction is called Latent Semantic Analysis (LSA) which is similar with Singular Value Decomposition (SVD). LSA can help us reduce the number of features without losing too much information. LSA also used the consine of the angle between two vectors to form the feature matrix. We reduced our features to only 100 dimensions and used reduced features matrix to fit the models.
 
-In the Figure. \ref{fig:FE}, we displayed the scatter plot of first two components. We can find out that the spam and ham email have been lightly separated.
+In the Figure. \ref{FE}, we displayed the scatter plot of first two components. We can find out that the spam and ham email have been lightly separated.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{data_reduction_cp12.png}
     \caption{Latent Semantic Analysis Components Plots}
-    \label{fig:FE}
+    \label{FE}
 \end{figure}
 
