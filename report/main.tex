@@ -16,7 +16,8 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
-
+\usepackage{floatrow} 
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
@@ -32,6 +33,9 @@
 \usepackage{graphicx}
 \usepackage{enumerate}
 \usepackage{multirow}
+\usepackage{amsmath,booktabs,colortbl}
+
+
 
 % Margins
 \topmargin=-0.45in
@@ -147,7 +151,7 @@
 
 \begin{table}[H]
 	\centering
-	\caption{Summary of Models Using Unit-Gram}
+	\caption{Summary of Models Using Uni-Gram}
 	\label{Summary-one-gram}
 	\begin{tabular}{lccccccc}
 		\hline

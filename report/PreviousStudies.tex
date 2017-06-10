@@ -9,10 +9,10 @@ People already came up with the idea of spam/ham e-mail filtering before 2004. I
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1.0, width=\linewidth]{2004.png}\\
+	\includegraphics[scale=1.0, width=\linewidth]{2004.png}
 	\caption{Summary of \textit{Machine Learning Techniques in Spam Filtering}}
 	\label{paper_summary_2004}
-\end{figure}\\
+\end{figure}
 
 In 2010, \textit{Email Spam Filtering using Supervised Machine Learning Techniques } written by V.Christina, they used Naive Bayes, J-48(Decision Tree) and Multilayer Perceptron. And they found out MLP performed the best with 99.3\% accuracy rate when experimenting with a corpus of 1500 messages.\\
 
@@ -20,32 +20,49 @@ In 2010, \textit{Email Spam Filtering using Supervised Machine Learning Techniqu
 	\begin{subfigure}{\textwidth}
 		\centering
 		\includegraphics[width=.4\linewidth]{2010-1.png}
-		\includegraphics[width=.4\linewidth]{2010-2.png}\\
+		\includegraphics[width=.4\linewidth]{2010-2.png}
 	\end{subfigure}%
 	\caption{Summary of \textit{Email Spam Filtering using Supervised Machine Learning Techniques}}
 	\label{paper_summary_2010}
-\end{figure}\\
+\end{figure}
 
 
 
-In 2016, \textit{Spam Mail Detection using Classification} written by Parhat and Gambhir used Naive Bayes, SVM and J-48(Decision Tree). And they found out Naive Bayes performed the best with 76\% accuracy rate in their experiment. \\ And \textit{Email Spam Detection} written by Ge and  Lauren, used the corpus from TREC 2007 with 1000 messages. They tried logistic regression, Naive Bayesian, Decision Tree and K-NN. The finally found KNN with highest 99\% accuracy rate. \\
+In 2016, \textit{Spam Mail Detection using Classification} written by Parhat and Gambhir used Naive Bayes, SVM and J-48(Decision Tree). And they found out Naive Bayes performed the best with 76\% accuracy rate in their experiment. \\ 
+And \textit{Email Spam Detection} written by Ge and  Lauren, used the corpus from TREC 2007 with 1000 messages. They tried logistic regression, Naive Bayesian, Decision Tree and K-NN. The finally found KNN with highest 99\% accuracy rate. \\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{2016.png}\\
+	\includegraphics[width=10cm]{2016.png}
 	\caption{Performance of Different Classifiers}
 	\label{paper_summary_2016}
-\end{figure}\\
+\end{figure}
 
 
-The summary of methods in each previous studies by year is shown in Figure \ref{method_summary}. \\
+The summary of methods in each previous studies by year is shown in Table \ref{method_summary}. 
 
-\begin{figure}[H]
+\begin{table}[H]
 	\centering
-	\includegraphics[width=10cm]{Method_Summary.png}\\
 	\caption{Methods Summary}
 	\label{method_summary}
-\end{figure}\\
+	\begin{tabular}{lccccccc}
+		\hline
+		Year & NB & KNN   & SVM  & Decision Tree & MLP & Logistic & Best Model  \\ \hline
+		2004 &  V &  V    & V     &  \quad  & V Perceptron & \quad& MLP(98.5\%) \\
+		2010 &  V & \quad & \quad & V C4.5  & V            & \quad& MLP(99.3\%) \\ 
+		2016 &  V &    V  & V     & V  J48  &   V & V      & KNN(99\%)  \\ \hline
+	\end{tabular}
+\end{table}
+
+
+
+
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=10cm]{Method_Summary.png}
+%	\caption{Methods Summary}
+%	\label{method_summary}
+%\end{figure}
 
 \subsection{Our Works}
 
@@ -54,5 +71,5 @@ The summary of methods in each previous studies by year is shown in Figure \ref{
 
 	\item \textbf{Try 6 methods at the same time}: Previous studies compare accuracy rate with different methods, but they didn't compare them all at a time. So we studied the methods from 2004 to 2016, and apply all of possible methods with adequate tuning parameters to compare them 
 
-	\item \textbf{Apply 1-Gram and 2-Gram}: Each paper marked that data processing step is important to a good result. Here, we introduced bag of words of 1-Gram and 2-Gram methods in the feature engineering part. And we can see different result of accuracy rate in the following section.
+	\item \textbf{Apply Uni-Gram and Bi-Gram}: Each paper marked that data processing step is important to a good result. Here, we introduced bag of words of Uni-Gram and Bi-Gram methods in the feature engineering part. And we can see different result of accuracy rate in the following section.
 \end{enumerate}
