@@ -3,7 +3,7 @@ For decision tree, we use cross validation to tune the parameter max\_depth whic
 If right now we change to use bi-gram tfidf to fit the models with the same candidate of parameters, the time for fitting a model will be much longer than fitting unit-gram. It's around 1300 seconds to fit a model. The best parameter here is also max\_depth = 20. The accuracy rate here is 0.9398, which is smaller than that of one-gram model with max\_depth = 20. The confusion matrix is shown in Table \ref{Confusion_DT}. The mis-classification rate when the data is ham will be 8.3729\% and that for a spam email is 4.5641\%. The ham email will also have higher probability to predict wrong. 
 
 
-\begin{table}
+\begin{table}[H]
 \centering
 \begin{subtable}{.5\textwidth}
 \centering
