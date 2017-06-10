@@ -17,8 +17,6 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 
-\usepackage{floatrow} 
-\newfloatcommand{capbtabbox}{table}[][\FBwidth]
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
@@ -30,7 +28,10 @@
 \usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{subcaption}
-\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{enumerate}
 
 
 % Margins
@@ -127,47 +128,18 @@
 
 \subsection{Feature Engineering}
 \input{FeatureEngineering.tex}
-
-
 \subsection{Fit Models}
 
-\subsubsection{Navie Bayes}
-\input{NB.tex}
-\subsubsection{KNN}
-\input{KNN.tex}
-\subsubsection{SVMs}
-\input{SVM.tex}
-\subsubsection{MLP}
-\subsubsection{Decision Tree}
-\input{DecisionTree.tex}
-\subsubsection{Logistic}
-\input{Logistic.tex}
 
 \section{Conclusion and exploration}
-
-
-\begin{table}[H]
-	\centering
-	\caption{Summary of Accuracy When Using Unit-Gram TFIDF}
-	\label{Summary_one_gram}
-	\begin{tabular}{@{}ccccccc@{}}
-		\toprule
-		Model    & Logistic & Naive Bayes & KNN    & Decision Tree & MLP & SVM \\ \midrule
-		Accuracy &          &             & 0.9657 & 0.9447        &     &     \\ \bottomrule
-	\end{tabular}
-\end{table}
-
-
-\begin{table}[H]
-	\centering
-	\caption{Summary of Accuracy When Using Bi-Gram TFIDF}
-	\label{Summary_bi_gram}
-	\begin{tabular}{@{}ccccccc@{}}
-		\toprule
-		Model    & Logistic & Naive Bayes & KNN    & Decision Tree & MLP & SVM \\ \midrule
-		Accuracy &          &             & 0.9678 & 0.9398        &     &     \\ \bottomrule
-	\end{tabular}
-\end{table}
-
+\subsection{Navie Bayes}
+\input{NB.tex}
+\subsection{KNN}
+\subsection{Linear SVM}
+\subsection{RBF SVM}
+\subsection{MLP}
+\subsection{Decision Tree}
+\subsection{Logistic}
+\input{Logistic.tex}
 
 \end{document}
