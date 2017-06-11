@@ -5,16 +5,16 @@
 It is important to study what people did and create our study on top of it. In this section, we focus on summarize previous studies of spam/ham e-mail filtering and their machine learning methods. At the end of this section, we point out the new methods and new data we use in this project to show our understanding.  \\
 
 \subsection{What We Learn}
-People already came up with the idea of spam/ham e-mail filtering before 2004. In the paper \textit{Machine Learning Techniques in Spam Filtering} written by Konstantin in 2004, the experiment used four main methods : Naive Bayes, K-NN, Perceptron, and SVM. And compare accuracy rate of each methods. In this basic practice, they found the Perceptron method has the highest accuracy rate, 98.5\% with a corpus of 1099 messages. \\
+People already came up with the idea of spam/ham e-mail filtering before 2004. In the paper \textit{Machine Learning Techniques in Spam Filtering} written by Konstantin in 2004\cite{MLinspam}, the experiment used four main methods : Naive Bayes, K-NN, Perceptron, and SVM. And compare accuracy rate of each methods. In this basic practice, they found the Perceptron method has the highest accuracy rate, 98.5\% with a corpus of 1099 messages. \\
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1.0, width=\linewidth]{./plots/2004.png}
-	\caption{Summary of \textit{Machine Learning Techniques in Spam Filtering}}
+	\caption{Summary of \textit{Machine Learning Techniques in Spam Filtering\cite{MLinspam}}}
 	\label{paper_summary_2004}
 \end{figure}
 
-In 2010, \textit{Email Spam Filtering using Supervised Machine Learning Techniques } written by V.Christina, they used Naive Bayes, J-48(Decision Tree) and Multilayer Perceptron. And they found out MLP performed the best with 99.3\% accuracy rate when experimenting with a corpus of 1500 messages.\\
+In 2010, \textit{Email Spam Filtering using Supervised Machine Learning Techniques } written by V.Christina\cite{EmailMLT}, they used Naive Bayes, J-48(Decision Tree) and Multilayer Perceptron. And they found out MLP performed the best with 99.3\% accuracy rate when experimenting with a corpus of 1500 messages.\\
 
 \begin{figure}[H]
 	\begin{subfigure}{\textwidth}
@@ -22,19 +22,19 @@ In 2010, \textit{Email Spam Filtering using Supervised Machine Learning Techniqu
 		\includegraphics[width=.4\linewidth]{./plots/2010-1.png}
 		\includegraphics[width=.4\linewidth]{./plots/2010-2.png}
 	\end{subfigure}%
-	\caption{Summary of \textit{Email Spam Filtering using Supervised Machine Learning Techniques}}
+	\caption{Summary of \textit{Email Spam Filtering using Supervised Machine Learning Techniques\cite{EmailMLT}}}
 	\label{paper_summary_2010}
 \end{figure}
 
 
 
-In 2016, \textit{Spam Mail Detection using Classification} written by Parhat and Gambhir used Naive Bayes, SVM and J-48(Decision Tree). And they found out Naive Bayes performed the best with 76\% accuracy rate in their experiment. \\ 
-And \textit{Email Spam Detection} written by Ge and  Lauren, used the corpus from TREC 2007 with 1000 messages. They tried logistic regression, Naive Bayesian, Decision Tree and K-NN. The finally found KNN with highest 99\% accuracy rate. \\
+In 2016, \textit{Spam Mail Detection using Classification} written by Parhat and Gambhir used Naive Bayes, SVM and J-48(Decision Tree)\cite{MailDectionCL}. And they found out Naive Bayes performed the best with 76\% accuracy rate in their experiment. \\ 
+And \textit{Email Spam Detection} written by Ge and  Lauren\cite{EmailDection}, used the corpus from TREC 2007 with 1000 messages. They tried logistic regression, Naive Bayesian, Decision Tree and K-NN. The finally found KNN with highest 99\% accuracy rate. \\
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=10cm]{./plots/2016.png}
-	\caption{Performance of Different Classifiers}
+	\caption{Performance of Different Classifiers\cite{EmailDection}}
 	\label{paper_summary_2016}
 \end{figure}
 
@@ -45,12 +45,12 @@ The summary of methods in each previous studies by year is shown in Table \ref{m
 	\centering
 	\caption{Methods Summary}
 	\label{method_summary}
-	\begin{tabular}{lccccccc}
+	\begin{tabular}{lcccccc||c}
 		\hline
 		Year & NB & KNN   & SVM  & Decision Tree & MLP & Logistic & Best Model  \\ \hline
-		2004 &  V &  V    & V     &  \quad  & V Perceptron & \quad& MLP(98.5\%) \\
-		2010 &  V & \quad & \quad & V C4.5  & V            & \quad& MLP(99.3\%) \\ 
-		2016 &  V &    V  & V     & V  J48  &   V & V      & KNN(99\%)  \\ \hline
+		2004\cite{MLinspam} &  V &  V    & V     &  \quad  & V Perceptron & \quad& MLP(98.5\%) \\
+		2010\cite{EmailMLT} &  V & \quad & \quad & V C4.5  & V            & \quad& MLP(99.3\%) \\ 
+		2016\cite{MailDectionCL} &  V &    V  & V     & V  J48  &   V & V      & KNN(99\%)  \\ \hline
 	\end{tabular}
 \end{table}
 
