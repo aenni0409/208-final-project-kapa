@@ -12,6 +12,6 @@ We would like to apply exploratory data analysis and fit different kinds of clas
 ### Map of our github : 
 
 - Code - data preprocessing/ analysis by python
-- report - project pdf file (.tex file)
+- report -  project .tex file for every section
 
 Note: because of the large volume of data set, we cannot pull data set to our repository. For the data information please refer to the project content.
