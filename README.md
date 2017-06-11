@@ -9,7 +9,7 @@ We would like to apply exploratory data analysis and fit different kinds of clas
 
 ### [Click to see our Project](report/main.pdf)
 
-### Map of our github : 
+### Map of our repository : 
 
 - [Code](Code) - data preprocessing/ analysis by python
 - [report](report) -  project .tex file for every section
