@@ -14,4 +14,8 @@ We would like to apply exploratory data analysis and fit different kinds of clas
 - [Code](Code) - data preprocessing/ analysis by python
 - [report](report) -  project .tex file for every section
 
-Note: Because of the large volume of data set, we cannot pull data set to our repository. For the data information please refer to the project content.
+Note: Because of the large volume of data set, we cannot pull data set to our repository. For the data information please refer to:
+1. [Enron](http://csmining.org/index.php/enron-spam-datasets.html)
+2. [Spam Assassin](http://csmining.org/index.php/spam-assassin-datasets.html)
+3. [2006TREC](http://plg.uwaterloo.ca/~gvcormac/treccorpus06/)
+4. [2007TREC](http://plg.uwaterloo.ca/~gvcormac/treccorpus07/)
