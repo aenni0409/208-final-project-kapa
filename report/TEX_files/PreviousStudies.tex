@@ -2,10 +2,10 @@
 
 \subsection{Purpose}
 
-It is important to study what people did and create our study on top of it. In this section, we focus on summarize previous studies of spam/ham e-mail filtering and their machine learning methods. At the end of this section, we point out the new methods and new data we use in this project to show our understanding.  \\
+It is important to study what people did and create our study on top of it. In this section, we focused on summarize previous studies of spam/ham e-mail filtering and their machine learning methods. At the end of this section, we would point out the new methods and new data we use in this project to show our understanding.  \\
 
 \subsection{What We Learn}
-People already came up with the idea of spam/ham e-mail filtering before 2004. In the paper \textit{Machine Learning Techniques in Spam Filtering} written by Konstantin in 2004\cite{MLinspam}, the experiment used four main methods : Naive Bayes, K-NN, Perceptron, and SVM. And compare accuracy rate of each methods. In this basic practice, they found the Perceptron method has the highest accuracy rate, 98.5\% with a corpus of 1099 messages. \\
+People have already come up with the idea of spam/ham e-mail filtering before 2004. In the paper \textit{Machine Learning Techniques in Spam Filtering} written by Konstantin in 2004\cite{MLinspam}, the experiment used four main methods : Naive Bayes, K-NN, Perceptron, and SVM and compared accuracy rate of each methods. In this basic practice, they found the perceptron method has the highest accuracy rate, 98.5\% with a corpus of 1099 messages. \\
 
 \begin{figure}[H]
 	\centering
@@ -14,7 +14,7 @@ People already came up with the idea of spam/ham e-mail filtering before 2004. I
 	\label{paper_summary_2004}
 \end{figure}
 
-In 2010, \textit{Email Spam Filtering using Supervised Machine Learning Techniques } written by V.Christina\cite{EmailMLT}, they used Naive Bayes, J-48(Decision Tree) and Multilayer Perceptron. And they found out MLP performed the best with 99.3\% accuracy rate when experimenting with a corpus of 1500 messages.\\
+In 2010, \textit{Email Spam Filtering using Supervised Machine Learning Techniques } written by V.Christina\cite{EmailMLT}, they used Naive Bayes, J-48(Decision Tree) and Multilayer Perceptron. They indicated that MLP performed the best with 99.3\% accuracy rate when experimenting with a corpus of 1500 messages.\\
 
 \begin{figure}[H]
 	\begin{subfigure}{\textwidth}
@@ -67,9 +67,9 @@ The summary of methods in each previous studies by year is shown in Table \ref{m
 \subsection{Our Works}
 
 \begin{enumerate}
-	\item \textbf{Use multiple data source}: In each paper, they mainly use a single year of corpus data. In our project, we tried to source different e-mail and integrate them. The format of each data source is different thus hard to clean. And we successfully got to manage a huge data set. 
+	\item \textbf{Use multiple data source}: In each paper, they mainly use a single year of corpus data. In our project, we tried to source different emails and integrate them. The format of each data source is different thus hard to clean. However, we successfully got to manage a huge data set. 
 
-	\item \textbf{Try 6 methods at the same time}: Previous studies compare accuracy rate with different methods, but they didn't compare them all at a time. So we studied the methods from 2004 to 2016, and apply all of possible methods with adequate tuning parameters to compare them 
+	\item \textbf{Try 6 methods at the same time}: Previous studies compare accuracy rate with different methods, but they didn't compare them all at a time. So we studied the methods from 2004 to 2016, and applied all of possible methods with adequate tuning parameters.
 
-	\item \textbf{Apply Uni-Gram and Bi-Gram}: Each paper marked that data processing step is important to a good result. Here, we introduced bag of words of Uni-Gram and Bi-Gram methods in the feature engineering part. And we can see different result of accuracy rate in the following section.
+	\item \textbf{Apply Uni-Gram and Bi-Gram}: Each paper marked that data processing step is important to a good result. Here, we introduced bag of words of Uni-Gram and Bi-Gram methods in the feature engineering part. We would see different results of accuracy rates in the following sections.
 \end{enumerate}
