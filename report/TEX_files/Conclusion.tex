@@ -1,6 +1,6 @@
 From our exploratory data analysis with the word clouds and top-10 words by year, we notice that there is a transition year for spam by the focus away from Windows XP and Microsoft toward more business/monetary associated terms. From the word clouds, we can also see that after 2002, we have a greater variety of terms appearing. No obvious pattern can be identified in the ham emails, besides the consistent occurrence of the term edu which leads us to suspect that our email corpus may come from an educational setting.\\
 
-For the model comparisons, applying bi-gram does not improve our accuracy but more time consuming. Naive Bayesian has the lowest accuracy rate but latest time spending. The reason of lowest accuracy rate may come from the assumption of feature independence. SVMs spend longest time to fit the models which are not practical if data set is large. The accuracy rate at KNN and MLP are both relatively high but MLP is more efficient than KNN. Those result correspond to our our previous studies Table \ref{method_summary}. Among of all, if we needs to balance the time and accuracy, we can find out that logistic model provides us over than 93 percent accuracy rate but only cost less than 1 minute which might be optimal option.
+For the model comparisons, applying bi-gram does not improve our accuracy but more time consuming. Naive Bayesian has the lowest accuracy rate but latest time spending. The reason of lowest accuracy rate may come from the naive assumption of feature independence. SVMs takes the longest time to fit  models which is not practical if a data set is large. The accuracy rate at KNN and MLP are both relatively high but MLP is more efficient than KNN. Those result correspond to our our previous studies Table \ref{method_summary}. Among of all, if we needs to balance the time and accuracy, we can find out that logistic model provides us over than 93 percent accuracy rate but only cost less than 1 minute which might be optimal option.
 
 \begin{table}[H]
 	\centering
@@ -9,8 +9,8 @@ For the model comparisons, applying bi-gram does not improve our accuracy but mo
 	\begin{tabular}{lccccccc}
 		\hline
 		Model    & Logistic  & Naive Bayes & KNN    & Decision Tree & MLP & Linear SVM  & rbf SVM \\ \hline
-		Accuracy&  0.93309   & 0.7304       & 0.9658 & 0.9447        & 0.9677 & 0.9458  & 0.92246 \\
-		Time (sec) & 17 & 0.64 &  457 & 81.1206  & 147.6813 & 6504       & 4024    \\ \hline
+		Accuracy&  0.9320   & 0.7253       & 0.9658 & 0.9447        & 0.9677 & 0.9458  & 0.92246 \\
+		Time (sec) & 13 & 0.43 &  457 & 81.1206  & 147.6813 & 6504       & 4024    \\ \hline
 	\end{tabular}
 \end{table}
 
