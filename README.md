@@ -8,7 +8,7 @@ Chia-Hui Shen, Pei-Ying Lin, Kavi Tan, Ying-Chen Chou
 We would like to apply exploratory data analysis and fit different kinds of classification models that people have not compared to summary our finding. 
 
 
-###Here is the may of our github : 
+### Here is the may of our github : 
 
 - Code - data preprocessing/ analysis
 - report - project pdf file (.tex file)
